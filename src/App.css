@@ -7,3 +7,62 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.sideWrap {
+  width: 320px;
+}
+
+.signupWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 32px 20px;
+  box-shadow: 0 0 20px rgba(15, 124, 65, 0.2);
+}
+
+@media screen and (min-width: 767px) {
+  .main {
+    padding: 29px 32px;
+    background: url('./assets/bg/BG-tablet.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .sideWrap,
+  .signupWrap {
+    width: 50%;
+  }
+  .signupWrap {
+    margin-top: 52px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .main {
+    padding: 40px 112px;
+    background: url('./assets/bg/BG.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .wrapper {
+    gap: 104px;
+  }
+  .sideWrap {
+    width: 624px;
+  }
+  .signupWrap {
+    width: 488px;
+    margin-top: 70px;
+  }
+  .promoWrap {
+    display: flex;
+    gap: 30px;
+  }
+}

@@ -26,6 +26,7 @@ const schema = yup.object().shape({
     .string()
     .matches(phoneRegExp, 'Phone number is not valid')
     .required('Phone number is required'),
+  policy: yup.boolean().oneOf([true], 'Ви повинні погодитися з умовами'),
 });
 
 const SignUpForm = () => {
@@ -86,23 +87,28 @@ const SignUpForm = () => {
 
           {errors.phone && <p className={css.error}>{errors.phone.message}</p>}
         </div>
-        <input
-          type="checkbox"
-          id="acceptTerms"
-          placeholder="policy"
-          {...register('policy', { required: true })}
-          className={css.checkbox}
-        />
-        <label htmlFor="acceptTerms">
-          Згоден з{' '}
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            Політика конфиденційності
-          </a>{' '}
-          та{' '}
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            Умови користування послугами
-          </a>
-        </label>
+        <div className={css.privacyWrap}>
+          <input
+            type="checkbox"
+            id="acceptTerms"
+            placeholder="policy"
+            {...register('policy', { required: true })}
+            className={css.checkbox}
+          />
+          <label htmlFor="acceptTerms">
+            Згоден з{' '}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Політика конфиденційності
+            </a>{' '}
+            та{' '}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Умови користування послугами
+            </a>
+          </label>
+          {errors.policy && (
+            <p className={css.error}>{errors.policy.message}</p>
+          )}
+        </div>
 
         <button type="submit" className={css.signUpButton}>
           {loading.signUp ? 'Обробка  ...' : 'Зареєструватися'}

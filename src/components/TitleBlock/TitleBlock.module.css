@@ -16,3 +16,35 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+@media screen and (min-width: 767px) {
+  .TitleBlockWrap {
+    margin-top: 24px;
+  }
+
+  .TitleBlockWrap h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .TitleBlockWrap {
+    margin-top: 40px;
+  }
+
+  .TitleBlockWrap h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+    margin-bottom: 40px;
+    text-wrap: auto;
+  }
+  .TitleBlockWrap p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
