@@ -1,0 +1,41 @@
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+:root {
+  font-family: 'Montserrat', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #010101;
+
+  --main-color: #0f7c41;
+  --main-color-hover: #31ad6b;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

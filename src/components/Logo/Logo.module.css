@@ -1,0 +1,9 @@
+.logoWrap {
+  height: 30px;
+  margin-bottom: 16px;
+}
+
+.logoWrap:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
